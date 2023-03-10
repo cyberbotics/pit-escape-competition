@@ -13,17 +13,12 @@
 - <https://github.com/cyberbotics/robot-programming-competition-disabled>
 - <https://github.com/cyberbotics/inverted-pendulum-competition-disabled>
 -->
-## Organizer Setup
-
-To organize your own competition, follow the instructions in the [ORGANIZER.md](ORGANIZER.md) file.
-
----
 
 ## Description
 
 <span id="description">
 
-Write here a short description of your competition.
+Program a BB-8 robot lost in a sand desert to climb out of a pit as quickly as possible.
 
 </span>
 
@@ -33,10 +28,10 @@ Write here a short description of your competition.
 
 <span id="information">
 
-- Difficulty: Middle School, High School, Bachelor, Master or PhD
-- Robot: robot name
-- Language: programming language of the controller template
-- Commitment: amount of time needed to participate in the competition
+- Difficulty: Bachelor
+- Robot: BB-8
+- Language: Python
+- Commitment: A few hours
 
 </span>
 
@@ -49,6 +44,7 @@ If not already done, [sign in](https://github.com/login) to your GitHub account 
 ### 1. Create your own Participant Repository from this Template
 
 [Click here](../../generate) to create your own repository automatically or do it manually by clicking on the green button "Use this template". If you get a 404 page it's probably because you are not connected to your GitHub account.
+
 - Fill the "Repository name" field with a name for your controller.
 - Set the visibility of your repository to "Private" unless you don't care about people looking at your code.
 - Finally, click on the green button "Create repository from template".
@@ -63,7 +59,7 @@ Otherwise, you must grant access to your repository to the competition organizer
 
 - [Click here](../../settings/access) to go to the "Collaborators" setting page. You might need to confirm the access by re-entering your GitHub password.
 - You should see a "Manage access" box where you will see the current collaborators of the repo.
-Click on the "Add people" and search for "[ORGANIZER_USERNAME](https://github.com/ORGANIZER_USERNAME)".
+Click on the "Add people" and search for "[omichel](https://github.com/omichel)".
 When you found the organizer, add him to the repository.
 
 ### 3. Modify your Robot Controller
@@ -89,13 +85,12 @@ You should inspect its source code to understand more in detail how your control
 
 It is recommended to install [Webots R2023b or more recent](https://github.com/cyberbotics/webots/releases) (currently only available as a nightly build) on your computer and to checkout your repository.
 This will allow you to work on the robot controller and test immediately your changes by running the world file in Webots.
-Once you are statisfied with your changes, you can push them to GitHub to trigger the evaluation of the new version of your robot controller.
+Once you are satisfied with your changes, you can push them to GitHub to trigger the evaluation of the new version of your robot controller.
 
-*Note:* if you push your changes on a branch which is not the default branch of your repository, no evalution will be triggered.
+*Note:* if you push your changes on a branch which is not the default branch of your repository, no evaluation will be triggered.
 
 ### Docker
 
 Your controller is evaluated in a [Docker container](https://www.docker.com/resources/what-container/). If your robot controller has dependencies, such as some specific libraries, python modules or a complete ROS framework, be sure to update the [controllers/Dockerfile](controllers/Dockerfile) to include all these dependencies. The default Webots Docker container includes the tools needed to run and compile simple C, C++ and Python controllers.
 
-[1]: https://webots.cloud/run?version=R2023a&url=https%3A%2F%2Fgithub.com%2FORGANIZER_USERNAME%2FORGANIZER_REPOSITORY%2Fblob%2Fmain%2Fworlds%2Frobot_programming.wbt&type=competition "Leaderboard"
-
+[1]: https://webots.cloud/run?version=R2023a&url=https%3A%2F%2Fgithub.com%2Fomichel%2Fpit-escape-competition%2Fblob%2Fmain%2Fworlds%2Fpit_escape.wbt&type=competition "Leaderboard"

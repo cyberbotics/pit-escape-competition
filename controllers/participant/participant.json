@@ -1,6 +1,6 @@
 {
-  "name": "My name",
-  "description": "Description of my robot controller program.",
-  "country": "ISO 3166-1 alpha-2 country code",
+  "name": "Example controller",
+  "description": "Oscillates back and forth to try to get out of the pit.",
+  "country": "demo",
   "programming": "Python"
 }

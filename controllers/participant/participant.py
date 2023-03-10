@@ -1,26 +1,37 @@
-"""Simple robot controller."""
+"""Sample Webots controller for the pit escape benchmark."""
 
 from controller import Robot
-import sys
 
-# Define the target motor position in radians.
-target = 1
-
-# Get pointer to the robot.
 robot = Robot()
 
-# Print the program output on the console
-print("Move the motors of the Thymio II to position " + str(target) + ".")
+timestep = int(robot.getBasicTimeStep())
 
-# Set the target position of the left and right wheels motors.
-robot.getDevice("motor.left").setPosition(target)
-robot.getDevice("motor.right").setPosition(target)
+# Max possible speed for the motor of the robot.
+maxSpeed = 8.72
 
-# Run the simulation for 10 seconds
-robot.step(10000)
+# Configuration of the main motor of the robot.
+pitchMotor = robot.getDevice("body pitch motor")
+pitchMotor.setPosition(float('inf'))
+pitchMotor.setVelocity(0.0)
 
-# This is the simplest controller that works for this competition
-# If you want to experiment with more complex functions, you can read the programming guide here:
-# https://www.cyberbotics.com/doc/guide/controller-programming?tab-language=python
-# or the Robot() documentation here:
-# https://cyberbotics.com/doc/reference/robot?tab-language=python
+# This is the time interval between direction switches.
+# The robot will start by going forward and will go backward after
+# this time interval, and so on.
+timeInterval = 1.5
+
+# At first we go forward.
+pitchMotor.setVelocity(maxSpeed)
+forward = True
+lastTime = 0
+
+while robot.step(timestep) != -1:
+    now = robot.getTime()
+    # We check if enough time has elapsed.
+    if now - lastTime > timeInterval:
+        # If yes, then we switch directions.
+        if forward:
+            pitchMotor.setVelocity(-maxSpeed)
+        else:
+            pitchMotor.setVelocity(maxSpeed)
+        forward = not forward
+        lastTime = now

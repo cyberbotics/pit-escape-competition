@@ -1,8 +1,8 @@
 publish: true
 type: competition
 world:
-  file: worlds/robot_programming.wbt
-  max-duration: 30
+  file: worlds/pit_escape.wbt
+  max-duration: 65
   metric: percent
   higher-is-better: true
-dockerCompose: theia:webots-project/controllers/participant/
+dockerCompose: competition:webots-project/controllers/participant/
