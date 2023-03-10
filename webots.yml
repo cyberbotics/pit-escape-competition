@@ -5,4 +5,4 @@ world:
   max-duration: 65
   metric: percent
   higher-is-better: true
-dockerCompose: competition:webots-project/controllers/participant/
+dockerCompose: competition:../../../usr/local/webots-project/controllers/participant/
