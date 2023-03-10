@@ -93,4 +93,4 @@ Once you are satisfied with your changes, you can push them to GitHub to trigger
 
 Your controller is evaluated in a [Docker container](https://www.docker.com/resources/what-container/). If your robot controller has dependencies, such as some specific libraries, python modules or a complete ROS framework, be sure to update the [controllers/Dockerfile](controllers/Dockerfile) to include all these dependencies. The default Webots Docker container includes the tools needed to run and compile simple C, C++ and Python controllers.
 
-[1]: https://webots.cloud/run?version=R2023a&url=https%3A%2F%2Fgithub.com%2Fomichel%2Fpit-escape-competition%2Fblob%2Fmain%2Fworlds%2Fpit_escape.wbt&type=competition "Leaderboard"
+[1]: https://webots.cloud/run?version=R2023a&url=https%3A%2F%2Fgithub.com%2Fcyberbotics%2Fpit-escape-competition%2Fblob%2Fmain%2Fworlds%2Fpit_escape.wbt&type=competition "Leaderboard"
