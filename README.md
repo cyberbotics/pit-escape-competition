@@ -1,18 +1,11 @@
 <span id="title">
 
-# Competition Organizer Template
+# Pit Escape Competition
 
 </span>
 
 <!-- This is the shield badge where you can replace the webots.cloud link in brackets with your personal webots.cloud page -->
 [![webots.cloud - Competition](https://img.shields.io/badge/webots.cloud-Competition-007ACC)][1]
-
-<!-- TODO: add examples when available
-## Competition Examples
-
-- <https://github.com/cyberbotics/robot-programming-competition-disabled>
-- <https://github.com/cyberbotics/inverted-pendulum-competition-disabled>
--->
 
 ## Description
 
