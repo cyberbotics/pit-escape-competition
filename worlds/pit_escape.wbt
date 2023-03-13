@@ -10,7 +10,7 @@ WorldInfo {
   info [
     "The BB-8 robot has to climb out of the pit."
   ]
-  title "Pit Escape"
+  title "Pit Escape Competition"
   window "pit_escape"
 }
 Viewpoint {
